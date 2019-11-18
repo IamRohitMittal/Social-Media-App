@@ -4,7 +4,7 @@ Finding Socail Media Profiles from Facebook Profile Url
 
 I could think of three methods while solving this problem.
 1. Data Science Method
-  Cons : Method would require a large set of data where input in form of facebook url and other from different websites will be provided.
+  Method would require a large set of data where input in form of facebook url and other from different websites will be provided.
          but no such data file is available.
          
 2. we could hit Facebook APIs from url given and retrieve some set of datas(like Location, Keywords, Name, Email etc.) from that which would help us extract data from other APIs from Instagram, Twitter.
