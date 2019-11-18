@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
 
     //Configure it: GET-request for the URL /article/.../load
     xhr.open('GET', fbUrl);
-    xhr.setRequestHeader( "Content-Language", "en-US")
+    // xhr.setRequestHeader( "Content-Language", "en-US")
 
     //Send the request over the network
     xhr.send();
@@ -30,15 +30,34 @@ app.get('/',(req,res)=>{
         var createStream=xhr.responseText;
         var regex=/<a.+?<div.+https:\/\/www.instagram\.com.+<\/div><\/a>/g
         var urls = createStream.match(regex);
-        //console.log(urls[0]);
         
-        var writeStream=fs.createWriteStream("url.html");
-        writeStream.write(urls[0]);
-        writeStream.end();
-
-
-        console.log(urls[0].match(/^https:\/\/www.instagram.com\/.+?<$/g));
-
+        var instaUrl=createStream.match(/https\:\/\/www\.instagram\.com\/(.)+?</g);
+        if(instaUrl == null){
+          console.log("No Instagram Urls available"); 
+        }
+        else{
+          instaUrl=instaUrl[0].substr(0,instaUrl[0].length-1)
+          console.log(instaUrl);
+        }                 
+        
+        var pintUrl=createStream.match(/https\:\/\/www\.pinterest\.com\/(.)+?</g)
+        if(pintUrl==null){
+          console.log("No Pinterest Urls available");          
+        }
+        else{
+          pintUrl=pintUrl[0].substr(0,pintUrl[0].length-1)
+          console.log(pintUrl);
+        }
+        
+        var twitUrl=createStream.match(/https\:\/\/twitter\.com\/(.)+?</g)
+        if(twitUrl==null){
+          console.log("No Twitter Urls available");  
+        }
+        else{
+          twitUrl=twitUrl[0].substr(0,twitUrl[0].length-1)
+          console.log(twitUrl);
+        }
+        
         var writeStream=fs.createWriteStream("contents.html");
         writeStream.write(createStream);
         writeStream.end();    
