@@ -17,3 +17,5 @@ In this method, we can use database(like MongoDB) to store information like emai
 Connecting this with method 1, we can fasten the process.
    
 4. Facebook Pages/Profile has a  section in About where most of urls for other social profiles are mentioned. Extract that as part of HttpResponse and extract other social media profiles from that.
+We can also use Libraries like Cheerio which can help us extract data from HTML Page(as according to URL), data retrieved can be taken in form of json, text and html.
+We can loop through those to extract our required data.
