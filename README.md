@@ -2,7 +2,7 @@
 Finding Social Media Profiles from Facebook Profile Url
 
 
-I could think of three methods while solving this problem.
+I could think of four methods while solving this problem.
 1. Data Science Method
   Method would require a large set of data where input in form of facebook url and other from different websites will be provided.
          but no such data file is available.
