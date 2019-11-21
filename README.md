@@ -22,7 +22,7 @@ We can also use Libraries like Cheerio which can help us extract data from HTML 
 We can loop through those to extract our required data.
 
 
-
+#MethodToRunTheApplication
 
 The file : getContents.js is being called by socialProfileInfo.html.
 
