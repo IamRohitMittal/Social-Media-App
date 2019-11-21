@@ -20,3 +20,11 @@ I could think of four methods while solving this problem.
 4. Facebook Pages/Profile has a  section in About where most of urls for other social profiles are mentioned. Extract that as part of HttpResponse and extract other social media profiles from that.
 We can also use Libraries like Cheerio which can help us extract data from HTML Page(as according to URL), data retrieved can be taken in form of json, text and html.
 We can loop through those to extract our required data.
+
+
+
+
+The file : getContents.js is being called by socialProfileInfo.html.
+
+Run the javascript file once.
+You will be displayed an HTML page for socialProfileInfo.html where you will be asked to enter Facebook URL and click a button and respective urls will be logged on the console.
