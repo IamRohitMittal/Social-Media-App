@@ -2,7 +2,7 @@
   "name": "expressdemo",
   "version": "1.0.0",
   "description": "Demo for Express Framework",
-  "main": "demo.js",
+  "main": "getContents.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
