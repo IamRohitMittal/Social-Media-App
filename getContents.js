@@ -9,6 +9,9 @@ app=express();
 app.get('/',(req,res)=>{
     let fbUrl=req.query.fbUrl;
     
+    fbUrl+='about'
+    console.log(fbUrl);
+    
     //Create a new XMLHttpRequest object
     let xhr = new XMLHttpRequest();
 
